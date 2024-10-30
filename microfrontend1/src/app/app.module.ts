@@ -1,16 +1,13 @@
 
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
-
-const routes: Routes = [
-  { path: '', component: AppComponent },
-];
+import { BrowserModule } from '@angular/platform-browser';
+import { MicroFrontend1RoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [CommonModule, RouterModule.forChild(routes)],
+  imports: [BrowserModule, CommonModule, MicroFrontend1RoutingModule],
   bootstrap:[AppComponent]
 })
 export class MicroFrontend1Module {}

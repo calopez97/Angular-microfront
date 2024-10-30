@@ -11,7 +11,7 @@ sharedMappings.register(path.join(__dirname, "tsconfig.json"), [
 module.exports = {
   output: {
     uniqueName: "microfrontend1",
-    publicPath: "http://localhost:4201",
+    publicPath: "http://localhost:4201/",
   },
   optimization: {
     runtimeChunk: false,
@@ -26,13 +26,12 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      library: { type: "module" },
 
       // For remotes (please adjust)
       name: "microfrontend1",
       filename: "remoteEntry.js",
       exposes: {
-        "./Module": ".//src/app/app.module.ts",
+        "./Module": "./src/app/app.module.ts",
       },
 
       // For hosts (please adjust)
