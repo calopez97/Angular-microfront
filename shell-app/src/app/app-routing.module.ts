@@ -11,7 +11,7 @@ const routes: Routes = [
       return microfrontend1().MicroFrontend1Module;
     },
   },
-  { path: '', redirectTo: '/microfrontend1', pathMatch: 'full' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
